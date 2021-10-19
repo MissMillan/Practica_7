@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package miordenador;
+package Dominio;
 
 /**
  *
@@ -19,7 +19,11 @@ public class Teclado extends DispositivoEntrada {
         super(tipoEntrada, marca);
         
     }
-
+   //Constructor
+    public Teclado(int idTeclado, int contadorTeclados) {
+        this.idTeclado = idTeclado;
+        this.contadorTeclado = contadorTeclados;
+    }
     @Override
     public String toString() {
         return "Teclado{" + "idTeclado=" + idTeclado + ", contadorTeclado=" + contadorTeclado + '}';

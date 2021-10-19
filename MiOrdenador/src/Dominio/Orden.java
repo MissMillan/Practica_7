@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package miordenador;
+package Dominio;
 
 /**
  *
@@ -14,29 +14,26 @@ public class Orden extends Computadora {
     //atributos
     private int idOrden;
     Computadora comp[];
-    private int contadorOrdenes = 0;
-    private int contadorComputadoras;
-    private int maxComputadoras = 10;
+    //esto lo hacemos mediante el contecto estatico
+    private static int contadorOrdenes = 0;
+    private static int contadorComputadoras;
+    private static int maxComputadoras = 10;
 
     //constructor de la clase orden
     public Orden() {
+         contadorComputadoras = 0;
+        comp = new Computadora[maxComputadoras];
+        this.idOrden = ++Orden.contadorOrdenes;
     }
 
     //metodo paara agregar una computadora
-    public void agregarComputadora(Computadora comp) {
-
-        for (int i = 0; i < contadorComputadoras; i++) {
-             
-            
-                /*   if(Computadora.comp[i].<coste){
-                coste = v[i].getPrecio();
-                indice =i;*/
-                
-            
-           //[contadorComputadoras++] = comp;
-           
+ public void agregarComputadora(Computadora computadoras){
+        if(Orden.contadorComputadoras < Orden.maxComputadoras){
+            comp[Orden.contadorComputadoras++] = computadoras;
+        } else {
+            System.out.println("Has llegado al maximo");
         }
-        }
+    }
     
     
         //metodo para mostrar la orden

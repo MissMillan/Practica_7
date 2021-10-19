@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package miordenador;
+package Dominio;
 
 /**
  *
@@ -11,23 +11,20 @@ package miordenador;
  */
 public class Raton extends DispositivoEntrada{
     //atributo
-    private int idRaton;
+private int idRaton;
     private int contadorRatones;
 
-    public Raton(String tipoEntrada, String marca) {
-        super(tipoEntrada, marca);
+    //Constructor
+    public Raton(int idRaton, int contadorRatones) {
+        this.idRaton = idRaton;
+        this.contadorRatones = contadorRatones;
     }
-
-
-  
-
- 
-
+    
+    //ToString
     @Override
     public String toString() {
         return "Raton{" + "idRaton=" + idRaton + ", contadorRatones=" + contadorRatones + '}';
     }
-
- 
+    
     
 }

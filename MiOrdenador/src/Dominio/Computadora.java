@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package miordenador;
+package Dominio;
 
 /**
  *
@@ -11,13 +11,24 @@ package miordenador;
  */
 public class Computadora {
     
-    //atributos
-    private int idComputadora;
+ private int idComputadora;
     private String nombre;
     Monitor monitor;
     Teclado teclado;
-    Raton Raton;
+    Raton raton;
 
+    //Constructores
+    public Computadora() {
+    }
+
+    public Computadora(String nombre, Monitor monitor, Teclado teclado, Raton raton) {
+        this.nombre = nombre;
+        this.monitor = monitor;
+        this.teclado = teclado;
+        this.raton = raton;
+    }
+
+    //Getter and Setter
     public int getIdComputadora() {
         return idComputadora;
     }
@@ -51,28 +62,18 @@ public class Computadora {
     }
 
     public Raton getRaton() {
-        return Raton;
+        return raton;
     }
 
-    //constructor de la clase computadora
-    public void setRaton(Raton Raton) {
-        this.Raton = Raton;
+    public void setRaton(Raton raton) {
+        this.raton = raton;
     }
-
-    public Computadora() {
-    }
-
-    public Computadora(Monitor monitor, Teclado teclado, Raton Raton) {
-        this.monitor = monitor;
-        this.teclado = teclado;
-        this.Raton = Raton;
-    }
+    
+    //ToString
 
     @Override
     public String toString() {
-        return "Computadora{" + "idComputadora=" + idComputadora + 
-                ", nombre=" + nombre + ", monitor=" + monitor + 
-                ", teclado=" + teclado + ", Raton=" + Raton + '}';
+        return "Computadora{" + "idComputadora=" + idComputadora + ", nombre=" + nombre + ", monitor=" + monitor + ", teclado=" + teclado + ", raton=" + raton + '}';
     }
     
 
